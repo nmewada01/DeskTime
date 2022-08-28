@@ -1,11 +1,16 @@
-# DeskTime Project Clone
-
+### DeskTime Project Clone
+### const [responsive,setresponsive] = useState(true)
+### Responsive = {responsive && Yes}, FinalOutput = Yes;
 <h1 align="center">DeskTime</h1>
 
 DeskTime was born out of the need for the Draugiem Group to manage their many employees. An internal application was developed, and we soon realized that we'd made a tool that could be useful for many other companies. Why not offer it to them? - we thought. And so, the development began.
 At DeskTime, we’re committed to accountability, transparency, and fairness. DeskTime is a product designed to increase productivity in an open and empowering environment. The added benefit? Boosting your employees and motivating them to perform at 100% of their potential.
 
 TECH STACK : HTML(1.6%),CSS(5.7%),JavaScript(92.7%).
+
+FUNCTIONALITIES: log in, project-tracker, calories-tracker, time-tracker, using routes for every pages,
+
+
 
 1) a) <b>Navbar</b>.
 
@@ -73,3 +78,10 @@ At DeskTime, we’re committed to accountability, transparency, and fairness. De
 7)<b>Login</b> : Here is login Page where you can enter your email and password to login. In this I have used a reqres to authenticate the data. after enter the data you can click on the login button. after clicking the button the pop up shows where you will able to see that your login successful. In case you enter the wrong credentials the pop shows login failed. 
 ![login](https://user-images.githubusercontent.com/101567054/187091625-d7b967fe-2d0d-4351-9074-7824dd272154.png)
 
+
+contribute by 
+### Naresh Rajput
+
+### Deploy Links
+
+Netlify : https://630b34acf80c1f2745140234--desktime-project-nmewada01.netlify.app/
