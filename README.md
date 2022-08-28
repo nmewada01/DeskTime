@@ -7,7 +7,7 @@ At DeskTime, we’re committed to accountability, transparency, and fairness. De
 
 TECH STACK : HTML(1.6%),CSS(5.7%),JavaScript(92.7%).
 
-1) a) ###Navbar.
+1) a) <b>Navbar</b>.
 
 ![screenshot](https://user-images.githubusercontent.com/101567054/187068229-89c7b00a-14b8-452f-8fbf-361972340f6f.png)
 
