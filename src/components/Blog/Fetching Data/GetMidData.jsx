@@ -7,7 +7,7 @@ const GetMidData = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8080/midbloging")
+    fetch("https://desktime-tanner-redux.herokuapp.com/midbloging")
       .then((res) => res.json())
       .then((res) => setData(res))
       .catch((err) => console.log(err));

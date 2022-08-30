@@ -12,7 +12,7 @@ const Faq = () => {
   const [freq, setFreq] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:8080/faq")
+      .get("https://desktime-tanner-redux.herokuapp.com/faq")
       .then((res) => setFreq(res.data))
       .catch((err) => console.log(err));
   }, []);

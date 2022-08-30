@@ -7,7 +7,7 @@ const GetTopData = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8080/topbloging")
+    fetch("https://desktime-tanner-redux.herokuapp.com/topbloging")
       .then((res) => res.json())
       .then((res) => setData(res))
       .catch((err) => console.log(err));

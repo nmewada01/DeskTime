@@ -21,6 +21,10 @@
   font-weight: 501;
   padding: 1rem;
 }
+.page{
+  display:none;
+  
+}
 
 .Login_button {
   border: 1px solid black;
@@ -35,7 +39,7 @@
   color: white;
   outline: none;
 }
-@media only screen and (max-width: 968px) {
+/* @media only screen and (max-width: 968px) {
   .main_div {
     display: flex;
     justify-content: center;
@@ -51,9 +55,9 @@
     font-size: 16px;
     font-weight: 501;
   }
-}
+} */
 
-@media only screen and (max-width: 768px) {
+/* @media only screen and (max-width: 768px) {
   .main_div {
     display: flex;
     justify-content: center;
@@ -86,9 +90,9 @@
     border-radius: 0.5rem;
     background-color: lightgray;
   }
-}
+} */
 
-@media only screen and (max-width: 468px) {
+/* @media only screen and (max-width: 468px) {
   .main_div {
     display: flex;
     justify-content: center;
@@ -120,4 +124,4 @@
     cursor: pointer;
     border-radius: 0.5rem;
   }
-}
+} */

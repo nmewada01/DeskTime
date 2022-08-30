@@ -14,27 +14,69 @@ const FaqPage = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8080/faq/${params.id}`)
+      .get(`https://desktime-tanner-redux.herokuapp.com/faq/${params.id}`)
       .then((res) => setFaqPage(res.data))
       .catch((err) => console.log(err));
-  }, []);
-  return <>
-   <TopFaq />
-      <Box textAlign="left" border="1px solid green" w="40%" m="auto" color="#4ea819" p="2rem" fontSize="lg">
-      <Heading color="black"  size="md">{faqPage.title}</Heading>  
-            <Box display="flex" alignItems="center" mt="1rem"><FaCheck/><Text>{faqPage.line1}</Text></Box>
-            <Box display="flex" alignItems="center"><FaCheck/><Text>{faqPage.line2}</Text></Box>
-            <Box display="flex" alignItems="center"><FaCheck/><Text>{faqPage.line3}</Text></Box>
-            <Box display="flex" alignItems="center"><FaCheck/><Text>{faqPage.line4}</Text></Box>
-            <Box display="flex" alignItems="center"><FaCheck/><Text>{faqPage.line5}</Text></Box>
-            <Box display="flex" alignItems="center"><FaCheck/><Text>{faqPage.line6}</Text></Box>
-            <Box display="flex" alignItems="center"><FaCheck/><Text>{faqPage.line7}</Text></Box>
-            <Box display="flex" alignItems="center"><FaCheck/><Text>{faqPage.line8}</Text></Box>
-            <Box display="flex" alignItems="center"><FaCheck/><Text>{faqPage.line9}</Text></Box>
-            <Box display="flex" alignItems="center"><FaCheck/><Text>{faqPage.line10}</Text></Box>      
+  }, [params.id]);
+  return (
+    <>
+      <TopFaq />
+      <Box
+        textAlign="left"
+        border="1px solid green"
+        w="40%"
+        m="auto"
+        color="#4ea819"
+        p="2rem"
+        fontSize="lg"
+      >
+        <Heading color="black" size="md">
+          {faqPage.title}
+        </Heading>
+        <Box display="flex" alignItems="center" mt="1rem">
+          <FaCheck />
+          <Text>{faqPage.line1}</Text>
+        </Box>
+        <Box display="flex" alignItems="center">
+          <FaCheck />
+          <Text>{faqPage.line2}</Text>
+        </Box>
+        <Box display="flex" alignItems="center">
+          <FaCheck />
+          <Text>{faqPage.line3}</Text>
+        </Box>
+        <Box display="flex" alignItems="center">
+          <FaCheck />
+          <Text>{faqPage.line4}</Text>
+        </Box>
+        <Box display="flex" alignItems="center">
+          <FaCheck />
+          <Text>{faqPage.line5}</Text>
+        </Box>
+        <Box display="flex" alignItems="center">
+          <FaCheck />
+          <Text>{faqPage.line6}</Text>
+        </Box>
+        <Box display="flex" alignItems="center">
+          <FaCheck />
+          <Text>{faqPage.line7}</Text>
+        </Box>
+        <Box display="flex" alignItems="center">
+          <FaCheck />
+          <Text>{faqPage.line8}</Text>
+        </Box>
+        <Box display="flex" alignItems="center">
+          <FaCheck />
+          <Text>{faqPage.line9}</Text>
+        </Box>
+        <Box display="flex" alignItems="center">
+          <FaCheck />
+          <Text>{faqPage.line10}</Text>
+        </Box>
       </Box>
       <Info />
-  </>;
+    </>
+  );
 };
 
 export default FaqPage;

@@ -1,13 +1,14 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import styles from "./Navbar.module.css";
-import { Box } from "@chakra-ui/react";
+import { Box, useMediaQuery } from "@chakra-ui/react";
 import Sidebar from "../Sidebar/Sidebar";
 import { useContext } from "react";
 import { AppContext } from "../../context/AppContext";
 
 const Navbar = () => {
   const [state] = useContext(AppContext);
+  const [isSmallerthan] = useMediaQuery('(min-width:650px)');
 
   const baseStyle = {
     color: "black",
@@ -53,7 +54,7 @@ const Navbar = () => {
             width="250"
           />
         </Box>
-        <Box className={styles.pages} w={["75%","70%","60%","50%"]} >
+        <Box className={isSmallerthan? styles.pages:styles.page}  w={["75%","70%","60%","50%"]} >
           <NavLink
             style={({ isActive }) => (isActive ? activeStyle : baseStyle)}
             to="/"
