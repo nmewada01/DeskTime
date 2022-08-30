@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Navigate, NavLink, useNavigate } from "react-router-dom";
 import styles from "./Navbar.module.css";
 import { Box, useMediaQuery } from "@chakra-ui/react";
 import Sidebar from "../Sidebar/Sidebar";
@@ -8,8 +8,8 @@ import { AppContext } from "../../context/AppContext";
 
 const Navbar = () => {
   const [state] = useContext(AppContext);
-  const [isSmallerthan] = useMediaQuery('(min-width:650px)');
-
+  const [isSmallerthan] = useMediaQuery("(min-width:650px)");
+  const navigate = useNavigate();
   const baseStyle = {
     color: "black",
     textDecoration: "none",
@@ -25,6 +25,9 @@ const Navbar = () => {
   const logout = () => {
     alert("logout success");
     state.isAuth(false);
+  };
+  const home_page = () => {
+    navigate("/");
   };
 
   return (
@@ -47,14 +50,17 @@ const Navbar = () => {
         <Box>
           <Sidebar />
         </Box>
-        <Box className={styles.logo}>
+        <Box className={styles.logo} onClick={home_page}>
           <img
             src="https://logotyp.us/files/desktime.svg"
             alt="logo"
             width="250"
           />
         </Box>
-        <Box className={isSmallerthan? styles.pages:styles.page}  w={["75%","70%","60%","50%"]} >
+        <Box
+          className={isSmallerthan ? styles.pages : styles.page}
+          w={["75%", "70%", "60%", "50%"]}
+        >
           <NavLink
             style={({ isActive }) => (isActive ? activeStyle : baseStyle)}
             to="/"

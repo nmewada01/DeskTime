@@ -20,9 +20,9 @@ const Top = () => {
   const TrackProject = () => {
     navigate("/mydesktime/project");
   };
-  const handleTimer=()=>{
+  const handleTimer = () => {
     navigate("/mydesktime/webtimer");
-  }
+  };
   return (
     <>
       <Box bg="#2693f8" mt="2rem" p="2rem">
@@ -57,7 +57,13 @@ const Top = () => {
         </Box>
 
         {/* buttons of tracker */}
-        <Box m="2rem" display="flex" justifyContent="center" gap="10px">
+        <Box
+          m="2rem"
+          w="100%"
+          display="flex"
+          justifyContent="space-evenly"
+          gap="1rem"
+        >
           <Button
             onClick={CalTrack}
             variant="outline"
@@ -77,7 +83,12 @@ const Top = () => {
           <Button variant="outline" colorScheme="white" color="white">
             DeskTop App
           </Button>
-          <Button onClick={handleTimer} variant="outline" colorScheme="white" color="white">
+          <Button
+            onClick={handleTimer}
+            variant="outline"
+            colorScheme="white"
+            color="white"
+          >
             Track Your Time
           </Button>
           <Button variant="outline" colorScheme="white" color="white">
